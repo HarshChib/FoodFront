@@ -1,0 +1,42 @@
+<div class="container">
+    <h3>ADD YOUR ITEMS</h3>
+    <form #addData="ngForm" (ngSubmit)="additem(addData)">
+        <div class="form-group">
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          ngModel
+          id="name"
+          name="name"
+          #name="ngModel"
+          placeholder="Enter the name of the item"
+          >
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            ngModel
+            id="quantity"
+            name="quantity"
+            #quantity="ngModel"
+            placeholder="Enter the quantity"
+            >
+        </div>
+        <div class="form-group">
+          <label for="subscriptionType">type</label>
+          <select class="form-control" id="type" name="type" ngModel #type="ngModel" placeholder="Enter the type">
+            <option>Monthly</option>
+            <option>Annual</option>
+            <option>Lifetime</option>
+            </select>
+          </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            ngModel
+            id="price"
+            name="price"
+            #productImageURL="ngModel"
+            placeholder="Enter the price"
+            >
+        </div>
+          <button type="submit" class="btn btn-primary">ADD TO MENU</button>
+        </form>
+</div>
+

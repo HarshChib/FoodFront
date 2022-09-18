@@ -1,4 +1,5 @@
 {
+
   "/serve/*": {
     "target": "http://localhost:8080",
     "pathRewrite": { "^/serve": "" },
@@ -6,4 +7,5 @@
     "changeOrigin": true,
     "logLevel": "debug"
   }
+
 }
