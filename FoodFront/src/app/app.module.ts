@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddMenuComponent } from './add-menu/add-menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 import { AddOrderComponent } from './add-order/add-order.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
@@ -19,6 +23,7 @@ import { SettingsComponent } from './settings/settings.component'
 @NgModule({
   declarations: [
     AppComponent,
+    AddMenuComponent,
     AddOrderComponent,
     OrderDetailsComponent,
     AddItemsComponent,
