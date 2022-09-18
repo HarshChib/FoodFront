@@ -11,18 +11,20 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AddMenuComponent } from './add-menu/add-menu.component';
 
 const routes: Routes = [
-  {path:"orders",component:OrderDetailsComponent},
-  {path:"add-order",component:AddOrderComponent},
-  {path:"add-item",component:AddItemsComponent},
-  {path:"items",component:ItemDetailsComponent},
   {path:"",component:LoginComponent},
   {path:"login",component:LoginComponent},
   {path:"register",component:RegistrationComponent},
   {path:"dashboard",component:DashboardComponent,children:[
     { path: 'cards', component: CardsComponent },
-     { path: 'settings', component: SettingsComponent }
+     { path: 'settings', component: SettingsComponent },
+     {path:"orders",component:OrderDetailsComponent},
+  {path:"add-order",component:AddOrderComponent},
+  {path:"add_item",component:AddItemsComponent},
+  {path:"items",component:ItemDetailsComponent},
+  {path:"menu",component:AddMenuComponent}
   ]},
 ];
 
