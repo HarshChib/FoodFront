@@ -10,17 +10,19 @@ import { OrderService } from '../Service/order.service';
   styleUrls: ['./add-order.component.css']
 })
 export class AddOrderComponent implements OnInit {
-
+  data:any;
   constructor(private orders:OrderService,private router:Router) { }
 
   ngOnInit(): void {
   }
   addOrder(form:NgForm){
     console.log(form.value);
-    this.orders.addorder(form.value).subscribe((res)=>{
+    this.orders.addorder(form.value,localStorage.getItem('id')).subscribe((res)=>{
       console.log(res);
       window.alert("the order is saved")
-      this.router.navigate(['/orders'])
+      this.data=res;
+      localStorage.setItem('order_id',this.data.id);
+      this.router.navigate(['/dashboard/add_item'])
     })
     
 

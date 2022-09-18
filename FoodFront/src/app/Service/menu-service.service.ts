@@ -10,6 +10,6 @@ export class MenuServiceService {
   constructor(private http:HttpClient) { }
 
   getData(user_id:any){
-    return this.http.get(`server/getmenu/${user_id}`);
+    return this.http.get(`serve/getmenu/${user_id}`);
   }
 }

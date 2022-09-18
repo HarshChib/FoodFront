@@ -9,11 +9,10 @@ import { MenuServiceService } from '../Service/menu-service.service';
 export class AddMenuComponent implements OnInit {
 
   result: any
-  user_id= 8;
   constructor(private menu:MenuServiceService) { }
 
   ngOnInit(): void {
-    this.menu.getData(this.user_id).subscribe((data)=>{
+    this.menu.getData(localStorage.getItem('id')).subscribe((data)=>{
       this.result=data;
       console.log(this.result);
   }

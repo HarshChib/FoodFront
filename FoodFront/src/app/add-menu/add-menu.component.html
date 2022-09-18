@@ -1,63 +1,40 @@
-  <!-- <div class="container"> -->
-  <div class="menu"><h3>Our Menu</h3></div> 
-  <div class="inside-menu">
-        <table class="table">
-            <!-- <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Type</th>
-                <th scope="col">About</th>
-                <th scope="col">Availability</th>
-                <th scope="col">Price</th>
-
-              </tr>
-            </thead> -->
-            <tbody>
-              <tr *ngFor="let r of result.foodProducts">
-                <!-- <td>{{r.id}}</td> -->
-              <ul style="list-style: none;">
-                
-             <div class="head"> 
-              <li><td>{{r.name}}</td></li>
-            </div>
-              <li class="name">{{r.price}} /Rs.</li>
-              <li class="name">{{r.type}}</li>
-              <li class="name">{{r.about}}</li>
-            
-              </ul>
-                <!-- <td>{{r.type}}</td> -->
-                <!-- <td>{{r.about}}</td> -->
-                <!-- <td>{{r.availability}}</td> -->
-                <!-- <td>{{r.price}}</td> -->
-            
-
-              </tr>
-            </tbody>
-          </table></div>
-    <!-- <div class="container">
-      <nav id="navbar-example2" class="navbar navbar-light bg-light">
-       <a class="navbar-brand" href="#">Our Menu</a> 
-        <ul class="nav nav-pills">
-          
-           <li class="nav-item dropdown"> 
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#one">one</a>
-              <a class="dropdown-item" href="#two">two</a>
-              <div role="separator" class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#three">three</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-       
-        <h4 id="one">one</h4>
-        <p>...</p>
-        <h4 id="two">two</h4>
-        <p>...</p>
-        <h4 id="three">three</h4>
-        <p>...</p>
-      <!-- </div>
-  </div> -->
+<section class="text-center">
+  <div class="p-5 bg-image background"></div>
+  <div
+    class="card mx-4 mx-md-5 shadow-5-strong"
+    style="
+      margin-top: -100px;
+      background: hsla(0, 0%, 100%, 0.3);
+      backdrop-filter: blur(30px);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    "
+  >
+    <div class="card-body py-5 px-md-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5" style="color: rgb(173, 63, 41)">
+            Login now
+          </h2>
+          <div class="inside-menu">
+            <table class="table">
+              <tbody>
+                <tr *ngFor="let r of result.foodProducts">
+                  <ul style="list-style: none">
+                    <div class="head">
+                      <li>
+                        <td>{{ r.name }}</td>
+                      </li>
+                    </div>
+                    <li class="name">{{ r.price }} /Rs.</li>
+                    <li class="name">{{ r.type }}</li>
+                    <li class="name">{{ r.about }}</li>
+                  </ul>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
