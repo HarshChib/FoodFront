@@ -1,0 +1,59 @@
+
+<section class="text-center">
+  <div class="p-5 bg-image background" ></div>
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        margin-top: 5%;
+            background: hsla(0, 0%, 100%, 0.3);
+            backdrop-filter: blur(30px);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        ">
+    <div class="card-body py-5 px-md-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5" style="color: rgb(173, 63, 41);">Login now</h2>
+          <form #logData="ngForm" (ngSubmit)="logUser(logData)">
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <div class="form-group form-outline">
+                  <input type="text" 
+                  class="form-control" 
+                  ngModel
+                  id="email" 
+                  name="email"
+                  #email="ngModel"
+                  placeholder="Enter User Email"
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-group form-outline mb-4">
+              <input type="password" 
+              class="form-control" 
+              ngModel
+              id="password" 
+              name="password"
+              #password="ngModel"
+              placeholder="Enter User Password"
+              >
+            </div>
+
+            <!-- Submit button -->
+            <div class="col text-center">
+              <button type="submit" class="button btn btn-primary" style="width: 15%;">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-8 px-md-5 pt-4" >
+          <h6>Are you a new user ?</h6>
+          <button routerLink="../register" type="submit" class="button btn btn-primary" style="width: 15%;">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
