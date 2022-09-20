@@ -1,14 +1,16 @@
 .background{
-    background-image: url("https://img.freepik.com/free-vector/cartoon-indian-restaurant-background_52683-69329.jpg?w=1380&t=st=1663419111~exp=1663419711~hmac=7b10a53750431cc70ddcbf90dd2e38070137ba58e1346c015f738dc6f5e1e9e8");
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-      background-repeat: round;
-    /* Preserve aspet ratio */
-    min-width: 100%;
-    min-height: 100%;
+  background-image: url("../images/pasta-1854245.jpg");
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+    background-repeat: round;
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height:100vh;  
+  
 }
-.button{
-    background-color:rgb(173, 63, 41);
-        color: rgb(230, 221, 221);
-  }

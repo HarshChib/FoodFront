@@ -1,4 +1,5 @@
 import { Component, OnInit ,Output, EventEmitter} from '@angular/core';
+import { UserService } from '../Service/user.service';
 
 @Component({
   selector: 'app-cards',
@@ -6,8 +7,16 @@ import { Component, OnInit ,Output, EventEmitter} from '@angular/core';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  constructor() { }
-
+  constructor(private user:UserService) { }
+manager=false;
+result:any
   ngOnInit(): void {
+    this.user.getUser(localStorage.getItem('id')).subscribe((data) => {
+      this.result = data;
+      if(this.result.role=="manager"){
+        this.manager=true;
+      }
+      console.log(this.result);
+    });
   }
 }

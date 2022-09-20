@@ -8,16 +8,17 @@ import { MenuServiceService } from '../Service/menu-service.service';
 })
 export class AddMenuComponent implements OnInit {
 
-  result: any
-  user_id= 8;
-  constructor(private menu:MenuServiceService) { }
+  result: any;
+  user_id = localStorage.getItem('id');
+  constructor(
+    private menu: MenuServiceService
+  ) {}
 
   ngOnInit(): void {
-    this.menu.getData(this.user_id).subscribe((data)=>{
-      this.result=data;
-      console.log(this.result);
-  }
+    this.menu.getData(this.user_id).subscribe((data) => {
+      this.result = data;
 
-    )
-}
+      console.log(this.result);
+    });
+  }
 }

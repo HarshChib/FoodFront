@@ -7,14 +7,14 @@ import { Injectable } from '@angular/core';
 export class ItemsService {
 
   constructor(private http:HttpClient) { }
-  additem(id:any){
-    return this.http.post(`serve/additem/${2}`,id);
+  additem(item:any,order_id:any){
+    return this.http.post(`serve/additem/${order_id}`,item);
   }
   getitems(){
     return this.http.get("serve/getitems");
   }
  
   getData(user_id:any){
-    return this.http.get(`server/getmenu/${user_id}`);
+    return this.http.get(`serve/getmenu/${user_id}`);
   }
 }
