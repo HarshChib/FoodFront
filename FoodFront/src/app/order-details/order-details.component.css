@@ -25,9 +25,9 @@
     overflow-y: scroll;
     width: 900px;
     height: 350px;
-    display: flex;
-    justify-content: center;
-    background-color: beige;
+    /* display: flex; */
+    /* justify-content: center; */
+    background-color: rgb(233, 231, 240);
      position: -webkit-sticky; 
   position: sticky;
   top: 0;
@@ -58,6 +58,10 @@
 
 }
 .table{
-    color: blueviolet;
+    color: black;
+}
 
+.row{
+    display: flex;
+    align-items: flex-end;
 }

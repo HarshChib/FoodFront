@@ -24,7 +24,12 @@ export class AddItemsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    
+    this.menu.getData(this.user_id).subscribe((data) => {
+      this.result = data;
+
+      console.log(this.result);
+    });
+
     this.order.getOrder(this.order_id).subscribe((data) => {
       this.result = data;
       console.log(this.result);
@@ -32,11 +37,7 @@ export class AddItemsComponent implements OnInit {
       this.cName=this.result.customerName
       this.cNumber=this.result.contactNumber
     });
-    this.menu.getData(this.user_id).subscribe((data) => {
-      this.result = data;
-
-      console.log(this.result);
-    });
+    
   }
   delete_items(id: any) {
     if (this.map.get(id) == 1) {

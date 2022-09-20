@@ -12,18 +12,20 @@
     <div class="card-body py-5 px-md-5">
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
-          <h2 class="fw-bold mb-5" style="color: rgb(173, 63, 41)">
-            ORDERS ARE HERE
-          </h2>
+         
           <div class="row">
-            <div class="col md-2"><button type="button" class="btn btn-outline-secondary" (click)="getNotCompleted()">IN PROGRESS</button></div>
-            <div class="col md-2"><button type="button" class="btn btn-outline-secondary" (click)="getCompleted()">DELIVERED</button></div>
+             <div class="col md-2"><button type="button" style="color: black;" class="btn btn-outline-secondary" (click)="getNotCompleted()">IN PROGRESS</button></div> 
+             <div style="
+             font-size: 160%;"> 
+              ORDERS ARE HERE
+            </div>
+            <div class="col md-2"><button type="button" style="color: black;" class="btn btn-outline-secondary" (click)="getCompleted()">DELIVERED</button></div>
       
         </div>
           
             
     
-    <div class="inside-order">
+    <div class="inside-order" style="margin-left: -100px;">
       
             <table class="table">
               <thead>
@@ -31,11 +33,11 @@
                 <tr>
                    <th scope="col">ID</th> 
                 
-                  <th scope="col">totalPrice</th>
-                  <th scope="col">&nbsp;&nbsp;ordercreatedTime</th>
-                   <th scope="col">orderDelivaryTime</th> 
-                  <th scope="col">customerName</th>
-                  <th scope="col">customerNumber</th>
+                  <th scope="col">Total Price</th>
+                  <th scope="col">&nbsp;&nbsp;Created Time</th>
+                   <th scope="col">Delivery Time</th> 
+                  <th scope="col">Customer Name</th>
+                  <th scope="col">Customer Number</th>
                 </tr>
               </thead>
               <tbody>
