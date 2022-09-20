@@ -23,18 +23,18 @@
     
   </div>
   <div>
-      <div class="clr card border-dark mb-3 hov opc" style="max-width: 18rem;" >
+      <div *ngIf="manager" class="clr card border-dark mb-3 hov opc" style="max-width: 18rem;" >
           <div class="card-header header">Modify Menu</div>
           <div class="card-body text-dark ">
             <p class="card-text">Modity your menu products and the details</p>
-            <button outerLink="../register" class="bttn btn btn-primary">Modify</button>
+            <button routerLink="../add_products" class="bttn btn btn-primary">Modify</button>
         </div>
         </div>
         <div class="clr card border-dark mb-3 hov opc" style="max-width: 18rem;">
           <div class="card-header header">Branch</div>
           <div class="card-body">
               <p class="card-text">Check out your branch details and address</p>
-            <button    routerLink="../register" class="bttn btn btn-primary">View Branch</button>
+            <button    routerLink="../branch" class="bttn btn btn-primary">View Branch</button>
           </div>
         </div>
         <div class="clr card border-dark mb-3 hov opc" style="max-width: 18rem;">

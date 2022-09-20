@@ -8,35 +8,40 @@ import { OrderService } from '../Service/order.service';
   styleUrls: ['./order-details.component.css']
 })
 export class OrderDetailsComponent implements OnInit {
-result:any=[]
-status:any=[]
-notcompleted:any=[]
-
-id=6;
-  constructor(private orders:OrderService,private router:Router) { }
-
-  ngOnInit(): void {
-    this.orders.getOrder(this.id).subscribe((data)=>{
-      this.result=data
-      console.log(data);
-      for(var val of this.result){
-        if (val.status===false){
-          this.notcompleted.push(val)
+  result:any=[]
+  status:any=[]
+  notcompleted:any=[]
+  
+  
+  
+    constructor(private orders:OrderService,private router:Router) { }
+  
+    ngOnInit(): void {
+      this.orders.getOrder(localStorage.getItem('id')).subscribe((data)=>{
+        this.result=data
+        console.log(data);
+        for(var val of this.result){
+          if (val.status===false){
+            
+            this.notcompleted.push(val)
+          }
+          else{
+            this.status.push(val)
+          }
         }
-        else{
-          this.status.push(val)
-        }
-      }
-    })
-
-
+      })
+  
+  
+    }
+    getCompleted(){
+     
+      this.result=this.status
+  
+    }
+  
+    getNotCompleted(){
+      this.result=this.notcompleted
+    }
+  
   }
-  getCompleted(){
-    this.result=this.status
-  }
-
-  getNotCompleted(){
-    this.result=this.notcompleted
-  }
-
-}
+  

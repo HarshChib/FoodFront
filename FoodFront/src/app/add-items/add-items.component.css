@@ -1,36 +1,18 @@
 
-
-
-
 .inside-menu{
 
     position:relative;
 
     overflow-y: scroll;
 
-    height: 350px;
+    height: 400px;
 
+    margin-top: -25px;
 }
-
-
-
-.menu{
-
-    display: flex;
-
-    justify-content: center;
-
-    background-color: white;
-
-     position: -webkit-sticky; /* Safari */
-
-  position: sticky;
-
-  top: 0;
-
+#itm{
+    padding-top: 15px;
+    margin-top: -25px;
 }
-
-
 
 .head{
 
@@ -40,20 +22,54 @@
 
 .name{
 
-    /* padding-left: 12px; */
-
+    padding-left: 12px; 
     display: flex;
-
     flex-direction: column;
 
     align-items: flex-start;
 
-    /* justify-content: left; */
-
     font-size: smaller;
-
-    font-weight: 100;
-
     font-style: italic;
 
 }
+.nm{
+    display: flex;
+    padding-left: 12px; 
+    font-size: smaller;
+    font-style: italic;
+    justify-content: space-between;
+}
+
+.ia{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bttn{
+    background-color:rgb(231, 228, 243);
+    color: black;
+    border-color: black;
+  }
+#qnt{
+    display: flex;
+}
+.btttn{
+    background-color:rgb(229, 226, 241);
+    color: black;
+    border-color: black;
+  }
+
+.btttn:hover{
+    background-color:rgb(217, 226, 235);
+    color: rgb(4, 3, 0);
+  }
+.bttn:hover{
+    background-color:rgb(203, 217, 233);
+    color: rgb(4, 3, 0);
+  }
+  .final_field{
+    margin-left: 37px;background-color: rgb(233, 231, 240);height: fit-content; 
+    border-radius: 7px;
+    padding: 10px;
+    margin-left: 10px;
+  }
