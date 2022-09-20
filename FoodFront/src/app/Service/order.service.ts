@@ -8,10 +8,14 @@ export class OrderService {
 
   constructor(private http:HttpClient) { }
 
-  addorder(id:any){
-    return this.http.post(`serve/addOrder/${6}`,id);
+  addorder(order:any,id:any){
+    return this.http.post(`serve/addOrder/${id}`,order);
   }
   getOrder(id:any){
-    return this.http.get(`serve/order/${id}`);
+    return this.http.get(`serve/getorderbyid/${id}`);
+  }
+
+  finalize_order(updated_order:any){
+    return this.http.put(`serve/updateorder`,updated_order);
   }
 }
