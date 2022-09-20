@@ -17,7 +17,7 @@ export class OrderDetailsComponent implements OnInit {
     constructor(private orders:OrderService,private router:Router) { }
   
     ngOnInit(): void {
-      this.orders.getOrder(localStorage.getItem('id')).subscribe((data)=>{
+      this.orders.getallorders(localStorage.getItem('id')).subscribe((data)=>{
         this.result=data
         console.log(data);
         for(var val of this.result){
@@ -44,4 +44,7 @@ export class OrderDetailsComponent implements OnInit {
     }
   
   }
+        
+  
+  
   

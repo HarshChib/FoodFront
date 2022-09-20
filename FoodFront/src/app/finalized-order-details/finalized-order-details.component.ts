@@ -14,6 +14,7 @@ export class FinalizedOrderDetailsComponent implements OnInit {
     this.order.getOrder(localStorage.getItem("order_id")).subscribe((data) => {
       this.result = data;
       console.log(this.result);
+      window.alert("the order is finalized");
       
     });
   }
