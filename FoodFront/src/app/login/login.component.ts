@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
         this.data = res;
         localStorage.setItem('id', this.data.id);
         this.go();
+        
       }
     });
   }
@@ -33,4 +34,5 @@ export class LoginComponent implements OnInit {
   hide(){
     this.error=false
   }
+  
 }
