@@ -20,9 +20,9 @@
                     <input type="text" 
                     class="form-control" 
                     ngModel
-                    id="fullName" 
-                    name="fullName"
-                    #fullName="ngModel"
+                    id="name" 
+                    name="name"
+                    #name="ngModel"
                     placeholder="Enter User Name"
                     >
                   </div>  
@@ -50,14 +50,13 @@
                 >
               </div>
               <div class="form-group form-outline mb-4" >
-                <input type="text" 
-                class="form-control" 
-                ngModel
-                id="role" 
-                name="role"
-                #role="ngModel"
-                placeholder="Enter User Role"
-                >
+          <select class="form-control" ngModel id="role" name="role"  #role="ngModel" placeholder="Enter the role">
+            <optgroup label="enter role" >
+              <option value="">staff</option>
+            <option>manager</option>
+            </optgroup>
+            </select>
+                
               </div>
   
               <!-- Submit button -->
