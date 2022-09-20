@@ -11,17 +11,18 @@
     }
     
     .clr{
-      background-color: #ffebcc;
+      background-color: aliceblue;
       font-family: Georgia, 'Times New Roman', Times, serif;
       
     }
     .bttn{
-      background-color:rgb(173, 63, 41);
-      color: rgb(230, 221, 221);
+      background-color:rgb(205, 197, 236);
+      color: black;
+      border-color: black;
     }
     .header{
-      background-color: rgb(173, 63, 41);
-      color: #ffebcc;
+      background-color:rgb(205, 197, 236);;
+      color: black;
     }
     .hov:hover {
       -ms-transform: scale(0.5); /* IE 9 */

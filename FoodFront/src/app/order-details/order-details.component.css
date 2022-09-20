@@ -1,7 +1,9 @@
+
 .res{
     text-decoration: none;
     text-align: center;
-    color: blue;
+    color: rgb(173, 63, 41);
+    padding-left: 12px;
     font-weight: 900;
     font-size:large;
     font-style: normal;
@@ -17,4 +19,45 @@
     font-family: 'Times New Roman', Times, serif;
     
     
+}
+ .inside-order{
+    position:relative;
+    overflow-y: scroll;
+    width: 900px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+     position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+}  
+/* .col md-2{
+    position:relative;
+    overflow-x: scroll;
+    height: 350px;
+
+} */
+
+.btn btn-outline-secondary{
+
+    background-color:black;
+    color: rgb(230, 221, 221);
+    transform: translateX(-50%);
+    padding-top: 100px;
+    
+
+}
+.btn btn-outline-secondary:hover{
+    -ms-transform: scale(0.5); /* IE 9 */
+      -webkit-transform: scale(0.5); /* Safari 3-8 */
+      transform: scale(1.03);
+      border-color: #232f3e;
+      outline-style: solid;
+      opacity: 1;
+
+}
+.table{
+    color: blueviolet;
+
 }

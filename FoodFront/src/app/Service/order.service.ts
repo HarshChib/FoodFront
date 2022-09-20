@@ -12,6 +12,10 @@ export class OrderService {
     return this.http.post(`serve/addOrder/${id}`,order);
   }
   getOrder(id:any){
-    return this.http.get(`serve/order/${id}`);
+    return this.http.get(`serve/getorderbyid/${id}`);
+  }
+
+  finalize_order(updated_order:any){
+    return this.http.put(`serve/updateorder`,updated_order);
   }
 }

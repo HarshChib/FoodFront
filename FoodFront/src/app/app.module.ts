@@ -14,6 +14,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CardsComponent } from './cards/cards.component';
 import { SettingsComponent } from './settings/settings.component';
+import { FinalizedOrderDetailsComponent } from './finalized-order-details/finalized-order-details.component';
+import { AddProductsComponent } from './add-products/add-products.component';
+import { BranchComponent } from './branch/branch.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { SettingsComponent } from './settings/settings.component';
     DashboardComponent,
     CardsComponent,
     SettingsComponent,
+    FinalizedOrderDetailsComponent,
+    AddProductsComponent,
+    BranchComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

@@ -10,7 +10,7 @@
     <div class="card-body py-5 px-md-5">
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
-          <h2 class="fw-bold mb-5" style="color: rgb(173, 63, 41);">Login now</h2>
+          <h2 class="fw-bold mb-5" style="color: black;">Login now</h2>
           <form #logData="ngForm" (ngSubmit)="logUser(logData)">
             <div class="row">
               <div class="col-md-12 mb-4">
@@ -22,6 +22,8 @@
                   name="email"
                   #email="ngModel"
                   placeholder="Enter User Email"
+                  (click)="hide()"
+                  required
                   >
                 </div>
               </div>
@@ -36,12 +38,15 @@
               name="password"
               #password="ngModel"
               placeholder="Enter User Password"
+              (click)="hide()"
               >
             </div>
-
+            <div *ngIf="error">
+              Username or Password incorrect!
+             </div>
             <!-- Submit button -->
             <div class="col text-center">
-              <button type="submit" class="button btn btn-primary" style="width: 15%;">
+              <button type="submit" class="button btn btn-secondary" style="width: 15%;">
                 Login
               </button>
             </div>
@@ -49,7 +54,7 @@
         </div>
         <div class="col-lg-8 px-md-5 pt-4" >
           <h6>Are you a new user ?</h6>
-          <button routerLink="../register" type="submit" class="button btn btn-primary" style="width: 15%;">
+          <button routerLink="../register" type="submit" class="button btn btn-secondary" style="width: 15%;">
             Sign Up
           </button>
         </div>
