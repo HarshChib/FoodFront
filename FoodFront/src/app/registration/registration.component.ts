@@ -12,16 +12,23 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private user:UserService,private route:Router) { }
 
-  ngOnInit(): void {
-  }
-  regUser(form:NgForm){
+  ngOnInit(): void {}
+  
+  // regUser(form:NgForm){
+    onSubmit(form:NgForm){
     console.log(form.value);
     this.user.addUser(form.value).subscribe((res)=>{
       console.log(res);
       this.go();
     })
-    
+  
   }
+  // onSubmit(form:NgForm){
+  //   console.log(form)
+  //   console.log(form.value)
+  
+  // }
+
   go(){
 		this.route.navigate(['/login']); // navigate to other page
 	}

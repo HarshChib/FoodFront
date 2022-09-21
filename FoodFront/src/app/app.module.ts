@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { AddMenuComponent } from './add-menu/add-menu.component';
 import { AddOrderComponent } from './add-order/add-order.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddItemsComponent } from './add-items/add-items.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
@@ -17,6 +17,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { FinalizedOrderDetailsComponent } from './finalized-order-details/finalized-order-details.component';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { BranchComponent } from './branch/branch.component';
+import { StaffComponent } from './staff/staff.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,9 @@ import { BranchComponent } from './branch/branch.component';
     FinalizedOrderDetailsComponent,
     AddProductsComponent,
     BranchComponent,
+    StaffComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

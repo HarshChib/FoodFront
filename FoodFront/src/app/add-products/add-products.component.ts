@@ -9,7 +9,7 @@ import { ProductsService } from '../Service/products.service';
   styleUrls: ['./add-products.component.css']
 })
 export class AddProductsComponent implements OnInit {
-
+  isLoading=false;
   result: any;
   
   user_id = localStorage.getItem('id');
@@ -20,6 +20,7 @@ export class AddProductsComponent implements OnInit {
   ngOnInit(): void {
     this.menu.getData(this.user_id).subscribe((data) => {
       this.result = data;
+      this.isLoading=true;
       console.log(this.result);
     });
   }

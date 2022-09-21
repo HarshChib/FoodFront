@@ -21,6 +21,7 @@
   border-color: black;
 }
 .fields {
+  text-transform: capitalize;
   color: rgb(5, 0, 0);
   background-color:rgb(205, 197, 236);;
   border-radius: 7px;

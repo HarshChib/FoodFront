@@ -8,14 +8,14 @@ import { OrderService } from '../Service/order.service';
 })
 export class FinalizedOrderDetailsComponent implements OnInit {
   result:any;
+  isOn=false;
   constructor(private order:OrderService) { }
 
   ngOnInit(): void {
     this.order.getOrder(localStorage.getItem("order_id")).subscribe((data) => {
       this.result = data;
+      this.isOn=true;
       console.log(this.result);
-      window.alert("the order is finalized");
-      
     });
   }
 

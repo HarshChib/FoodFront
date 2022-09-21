@@ -8,6 +8,7 @@
     height: 450px;
 
     margin-top: -25px;
+    text-transform: capitalize;
 }
 #itm{
     padding-top: 15px;
@@ -35,7 +36,6 @@
 .nm{
     display: flex;
     padding-left: 12px; 
-    font-size: smaller;
     font-style: italic;
     justify-content: space-between;
 }
