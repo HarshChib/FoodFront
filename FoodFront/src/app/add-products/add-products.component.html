@@ -10,6 +10,7 @@
       padding-bottom: 20px;
       padding-top: 20px;
     "
+    *ngIf="isLoading"
   >
   <h2 class="fw-bold mb-5" style="color: black;">Modify Menu</h2>
     <div class="card-body py-10 px-md-5">
@@ -105,7 +106,8 @@
                         </td>
                       </li>
                     </div>
-                    <div class="nm">{{ r.price }}/Rs.<button
+                    <div class="nm">{{ r.price }}/Rs.
+                      <button
                       (click)="delete_product(r.id)"
                       class="btn bttn btn-primary bttn"
                       style="margin-right: 10px;"
@@ -123,7 +125,7 @@
           </div>
         </div>
       </div>
-      <button routerLink="../menu" class="btn btn-primary bttn">Back To Menu</button>
+      <button routerLink="../menu" class="btn btn-primary bttn" style="margin-top: 15px;">Back To Menu</button>
     </div>
   </div>
 </section>

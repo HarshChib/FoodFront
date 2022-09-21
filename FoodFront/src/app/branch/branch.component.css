@@ -11,6 +11,7 @@
   top: 0;
 }  
 .res1{
+   text-transform: capitalize;
     text-decoration: none;
     color: rgb(173, 63, 41);
     padding-left: 12px;
@@ -20,6 +21,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .res{
+  text-transform: capitalize;
     text-decoration: none;
     color: black;
     padding-left: 12px;

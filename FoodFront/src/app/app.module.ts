@@ -17,6 +17,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { FinalizedOrderDetailsComponent } from './finalized-order-details/finalized-order-details.component';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { BranchComponent } from './branch/branch.component';
+import { StaffComponent } from './staff/staff.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BranchComponent } from './branch/branch.component';
     FinalizedOrderDetailsComponent,
     AddProductsComponent,
     BranchComponent,
+    StaffComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,ReactiveFormsModule],
   providers: [],
