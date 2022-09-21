@@ -10,6 +10,7 @@ export class AddMenuComponent implements OnInit {
 
   result: any;
   user_id = localStorage.getItem('id');
+  isLoading=false;
   constructor(
     private menu: MenuServiceService
   ) {}
@@ -17,7 +18,7 @@ export class AddMenuComponent implements OnInit {
   ngOnInit(): void {
     this.menu.getData(this.user_id).subscribe((data) => {
       this.result = data;
-
+      this.isLoading=true;
       console.log(this.result);
     });
   }

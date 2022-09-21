@@ -17,6 +17,7 @@ export class AddItemsComponent implements OnInit {
   cName:any;
   cNumber:any;
   order_id=localStorage.getItem('order_id');
+  isLoading=false;
   constructor(
     private menu: MenuServiceService,
     private items_service: ItemsService,
@@ -26,16 +27,16 @@ export class AddItemsComponent implements OnInit {
   ngOnInit(): void {
     this.menu.getData(this.user_id).subscribe((data) => {
       this.result = data;
-
       console.log(this.result);
     });
 
     this.order.getOrder(this.order_id).subscribe((data) => {
       this.result = data;
       console.log(this.result);
-      
       this.cName=this.result.customerName
       this.cNumber=this.result.contactNumber
+      
+      this.isLoading=true;
     });
     
   }
@@ -75,7 +76,7 @@ export class AddItemsComponent implements OnInit {
       id: localStorage.getItem('order_id'),
       totalPrice:this.total
     };
-    this.order.finalize_order(updated_status).subscribe((res) => {
+    this.order.finalize_order(updated_status,localStorage.getItem('id')).subscribe((res) => {
       console.log(res);
     });
   }

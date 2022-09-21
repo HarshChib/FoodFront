@@ -14,6 +14,7 @@ import { AddMenuComponent } from './add-menu/add-menu.component';
 import { FinalizedOrderDetailsComponent } from './finalized-order-details/finalized-order-details.component';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { BranchComponent } from './branch/branch.component';
+import { StaffComponent } from './staff/staff.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -32,7 +33,7 @@ const routes: Routes = [
       { path: 'menu', component: AddMenuComponent },
       { path: 'finalized_order', component: FinalizedOrderDetailsComponent },
       {path:"add_products",component:AddProductsComponent},
-      {path:"branch",component:BranchComponent}
+      {path:"staff",component:StaffComponent}
     ],
   },
 ];

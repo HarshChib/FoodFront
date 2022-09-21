@@ -10,11 +10,15 @@ import { UserService } from '../Service/user.service';
 })
 export class SettingsComponent implements OnInit {
   data:any;
+  manager=false;
   constructor(private user:UserService,private route:Router) { }
   ngOnInit(): void {
     this.user.getUser(localStorage.getItem('id')).subscribe((res)=>{
         console.log(res);
+        
         this.data=res;
+        if(this.data.role==="manager")
+          this.manager=true
         console.log(this.data.name);
       })
    }

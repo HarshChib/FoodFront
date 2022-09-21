@@ -16,7 +16,13 @@ export class UserService {
   getUser(id:any){
     return this.http.get(`serve/getuser/${id}`);
   }
+  getUsers(){
+    return this.http.get(`serve/getusers`);
+  }
   updateUser(user:any,id:any){
     return this.http.put(`serve/updateuser/${id}`,user);
+  }
+  updateByManager(id:any,role:any){
+    return this.http.put(`serve/updatebymanager/${id}/${role}`,null);
   }
 }
