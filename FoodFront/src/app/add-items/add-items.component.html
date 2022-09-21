@@ -9,12 +9,12 @@
       font-family: Georgia, 'Times New Roman', Times, serif;
     "
   >
-  <div>
+  <div style="text-transform: capitalize;">
     <h5 style="text-align: left;padding-left: 10px;padding-top: 10px;">Order Id&nbsp;:&nbsp; {{order_id}}</h5>
     <h5 style="text-align: left;padding-left: 10px;">Customer Name&nbsp;:&nbsp; {{cName}} </h5>
     <h5 style="text-align: left;padding-left: 10px;">Customer Number : {{cNumber}} </h5>
   </div>
-    <div class="card-body py-10  px-md-5">
+    <div class="card-body py-10  px-md-5" style="text-transform: capitalize;" *ngIf="isLoading">
       
       <div class="col d-flex justify-content-center">
         <div
@@ -23,7 +23,7 @@
         >
           <h3  class="fw-bold mb-5" style="padding-top: 10px;">Menu</h3>
           <hr style="margin-top: -40px ;"/>
-          <div class="inside-menu">
+          <div class="inside-menu" style="text-transform: capitalize;">
             <table class="table table-borderless">
               <tbody>
                 <tr *ngFor="let r of result.foodProducts">
@@ -53,7 +53,7 @@
             </table>
           </div>
         </div>
-        <div class="col-lg-5" style="background-color: rgb(233, 231, 240);border-radius: 7px;">
+        <div class="col-lg-5" style="background-color: rgb(233, 231, 240);border-radius: 7px;text-transform: capitalize;">
           <h3 class="fw-bold mb-5"style="padding-top: 10px;">Selected Items</h3>
           <hr style="margin-top: -40px ;"/>
           <div id="itm" class="inside-menu">
