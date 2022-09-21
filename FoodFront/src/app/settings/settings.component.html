@@ -1,62 +1,64 @@
 <section class="text-center">
-      <div class="card mx-4 mx-md-5 shadow-5-strong" style="
-            margin-top: 2%;
-            background: hsla(0, 0%, 100%, 0.3);
-            backdrop-filter: blur(30px);
-            ">
-        <div class="card-body py-5 px-md-5">
-    
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-8">
-              <h2 class="fw-bold mb-5">Update Details</h2>
-              <form #regData="ngForm" (ngSubmit)="updateUser(regData)" >
-                
-                
-                    <div class="form-group form-outline mb-4">
-                      <input type="text" 
-                      class="form-control" 
-                      ngModel
-                      id="name" 
-                      name="name"
-                      #name="ngModel"
-                      [(ngModel)]="data.name"
-                      >
-                      <label class="form-label" for="fullName">User Name</label>
-                    </div>  
-    
-                <!-- Password input -->
-                <div class="form-group form-outline mb-4">
-                  <input type="password" 
-                  class="form-control" 
-                  ngModel
-                  id="password" 
-                  name="password"
-                  #password="ngModel"
-                  placeholder="Enter New Password"
-                  >
-                  <label class="form-label" for="password">Password</label>
-                </div>
-                <div *ngIf="manager" class="form-group form-outline mb-4" >
-                  <input type="text" 
-                  class="form-control" 
-                  ngModel
-                  id="role" 
-                  name="role"
-                  #role="ngModel"
-                  [(ngModel)]="data.role"
-                  >
-                  <label class="form-label" for="role">Role</label>
-                </div>
-    
-                <!-- Submit button -->
-                <div class="col text-center">
-                  <button type="submit" class="btn btn-primary" style="width: 15%;">
-                    Update
-                  </button>
-                </div>
-              </form>
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        margin-top: 2%;
+        background: hsla(0, 0%, 100%, 0.3);
+        backdrop-filter: blur(30px);
+        ">
+    <div class="card-body py-5 px-md-5">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5">Update Details</h2>
+            
+          <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input type="text"
+               class="form-control" 
+               id="exampleInputEmail1" 
+               aria-describedby="emailHelp"
+               name="name"
+               #name="ngModel"
+               ngModel
+               required
+                 maxlength="20"
+                 minlength="3">
+                 <span *ngIf="name.invalid && name.touched" style="color: red">Enter valid Name</span>
             </div>
-          </div>
+            
+            <div class="form-group">
+                <label for="exampleInputPassword1">Enter Role</label>
+                <input type="email"
+                 class="form-control" 
+                 id="exampleInputPassword1"
+                 name="role"
+                 #role="ngModel"
+                 ngModel
+                 required
+                 maxlength="20"
+                 minlength="3">
+                 <span *ngIf="role.invalid && role.touched" style="color: red">Enter Valid Role</span>
+              </div>
+            
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password"
+                 class="form-control" 
+                 id="exampleInputPassword1"
+                 name="pass"
+                 #pass="ngModel"
+                 ngModel
+                 required
+                 pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+
+                 >
+                 <span *ngIf="pass.invalid && pass.touched" style="color: red">Enter valid password</span>
+              </div>
+            <button [disabled]="!regForm.valid" type="submit" class="btn btn-primary">submit</button>
+          </form>
+          
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section> 

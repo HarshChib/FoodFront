@@ -13,59 +13,64 @@
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8">
             <h2 class="fw-bold mb-5" style="color:black;">Sign up now</h2>
-            <form #regData="ngForm" (ngSubmit)="regUser(regData)" >
-              
-              
-                  <div class="form-group form-outline mb-4">
-                    <input type="text" 
-                    class="form-control" 
-                    ngModel
-                    id="name" 
-                    name="name"
-                    #name="ngModel"
-                    placeholder="Enter User Name"
-                    >
-                  </div>  
-              <!-- Email input -->
-              <div class="form-group form-outline mb-4">
-                <input type="text" 
-                class="form-control" 
-                ngModel
-                id="email" 
-                name="email"
-                #email="ngModel"
-                placeholder="Enter User Email"
-                >
+            <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm)">
+              <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input type="text"
+              name="name" 
+              #name="ngModel" 
+              ngModel 
+               class="form-control" 
+               id="exampleInputEmail1"
+              aria-describedby="emailHelp" 
+              minlength="3" 
+              maxlength="20"
+              required>
+              <span *ngIf="name.invalid && name.touched" style="color:brown;">
+                Plese enter a valid name </span>
               </div>
-  
-              <!-- Password input -->
-              <div class="form-group form-outline mb-4">
-                <input type="password" 
-                class="form-control" 
-                ngModel
-                id="password" 
-                name="password"
-                #password="ngModel"
-                placeholder="Enter User Password"
-                >
+              <div class="form-group">
+              <label for="exampleInputPassword1">Email</label>
+              <input type="text"
+               ngModel 
+               name="email"
+                #email="ngModel" 
+                required
+               class="form-control" 
+               id="exampleInputPassword1">
+              <span *ngIf="email.invalid && email.touched" style="color:brown;">
+                Plese enter a valid email </span>
               </div>
-              <div class="form-group form-outline mb-4" >
-          <select class="form-control" ngModel id="role" name="role"  #role="ngModel" placeholder="Enter the role">
-            <optgroup label="enter role" >
-              <option value="">staff</option>
-            <option>manager</option>
-            </optgroup>
-            </select>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" 
+                  ngModel 
+                  name="password" 
+                  #password="ngModel"
+                  class="form-control" 
+                  id="exampleInputPassword1"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" 
+                  required>
+                  <span *ngIf="password.invalid && password.touched" style="color:brown;">
+                  Plese enter a valid password </span>
+                 </div>
+          <div class="form-group form-outline mb-4" >
+            <label for="exampleInputPassword1">Role</label>
+                    <select class="form-control" 
+                    ngModel 
+                    id="role" 
+                    name="role" 
+                     #role="ngModel" 
+                     placeholder="Enter the role">
+                      <optgroup label="enter role" >
+                        <option value="">staff</option>
+                      <option>manager</option>
+                      </optgroup>
+                      </select>
+                </div>
                 
-              </div>
-  
-              <!-- Submit button -->
-              <div class="col text-center">
-                <button type="submit" class="button btn btn-secondary" style="width: 15%;">
-                  Sign up
-                </button>
-              </div>
-            </form>
+              <button [disabled]=!regForm.valid type="submit" class="btn btn-primary">Submit</button>
+              </form>
           </div>
           <div class="col-lg-8 px-md-5 pt-4" >
             <h6>Already a user ?</h6>
